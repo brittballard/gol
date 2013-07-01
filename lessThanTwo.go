@@ -1,5 +1,5 @@
 package gol
 
-func LessThanTwo(cell Cell, board Board) (dead bool) {
-  return true
+func LessThanTwo(c Cell, b Board) (dead bool) {
+  return b.LivingNeighborCount(c) < 2
 }
