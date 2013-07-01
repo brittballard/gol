@@ -1,5 +1,5 @@
 package gol
 
 type Board struct {
-  cells map[string]Cells
+  cells map[string]Cell
 }
