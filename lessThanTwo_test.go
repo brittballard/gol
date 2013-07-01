@@ -2,7 +2,7 @@ package gol
 
 import "testing"
 
-func TestNoNeighbors(t *testing.T) {
+func TestLessThanTwoNoNeighbors(t *testing.T) {
   c := Cell{x: 1, y: 1, alive: true}
   b := Board{cells: make(map[string]Cell)}
   if !LessThanTwo(c, b) {
@@ -10,7 +10,7 @@ func TestNoNeighbors(t *testing.T) {
   }
 }
 
-func TestOneNeighbors(t *testing.T) {
+func TestLessThanTwoOneNeighbors(t *testing.T) {
   c := Cell{x: 1, y: 1, alive: true}
   b := Board{cells: make(map[string]Cell)}
   b.cells["0:0"] = c
@@ -19,7 +19,7 @@ func TestOneNeighbors(t *testing.T) {
   }
 }
 
-func TestTwoNeighbors(t *testing.T) {
+func TestLessThanTwoTwoNeighbors(t *testing.T) {
   c := Cell{x: 1, y: 1}
   b := Board{cells: make(map[string]Cell)}
   b.cells["0:0"] = Cell{x: 0, y: 0, alive: true}
